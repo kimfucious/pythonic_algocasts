@@ -10,23 +10,22 @@ This repo is also not a substitute for the ton of material he covers throughout 
 
 - Oodles of exercises to practice challenging coding questions
 - Extensive unit tests to verify your solutions
+- Example solutions for every exercise
 
 ## Requirements
 
-- Python 3: some tests won't work if you use Python 2
+- [Python 3](https://www.python.org/downloads/): some tests won't work if you use Python 2
 - An testing framework: nose, pytest, or unnitest
 - A text editor: Atom, Sublime Text, Vim, Visual Studio Code, etc.
 - A terminal
 
-> :point_up: If you're running Windows 10 try [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+> :floppy_disk:  If you're running Windows 10 try [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-## Repo Contents
+> :snake:  There is an excellent Python extension for Visual Studio Code. Check it out [here](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
-> :point_up: Do not remove any of the `__init__.py` files from within the repo, or it will break test discovery.
+## Contents
 
-### Completed
-
-Examples of completed exercises that you can use to compare against your own work or to peek at when you're stuck
+> :point_up:  Do not remove any of the `__init__.py` files from within the repo, or it will break test discovery.
 
 ### Exercises
 
@@ -75,19 +74,39 @@ There are two html files in here:
 1.  The `events_example.html` file is for the events exercise. Frankly, you won't get much out of this, unless you have access to Stephen's course.
 2.  The `linkedlist_directions.html` file is a set of instructions for the fairly long linked list exercise.
 
+### Solutions
+
+Examples of solutions to the exercises that you can use to compare against your own work or to peek at when you're stuck.
+
+Feel free to recommend your solution(s) via pull request if you come up with anything better, cleaner, clearer, more-pythonic, etc. Please use `doctype` to document your solutions, instead of comments.
+
+Example:
+
+```python
+def function(x):
+  """
+  My super cool solution is based on using kittens, rainbows, and lambdas.
+  You can read about those things at http://kittensrainbowsandlambdas.org
+  """
+  pass
+  """
+```
+
+> :see_no_evil:  Solutions containing advertisements or other forms of spam/self-promotion won't be considered. This is a learning repo, not a marketplace.
+
 ### Tests
 
 There is one test file for each exercise. The naming convention should make it evident as to what tests what.
 
 All of the test files should be considered done, meaning that you should not need to edit any of them. They should _just work_ are just there to test the solutions that you create for the exercises.
 
-> :bug: If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
+> :beetle:  If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
 
 Some of the test files contain one or more test cases (i.e. Classes) and these can contain one to several test methods. See the Testing section for more info on tests.
 
 ## Testing
 
-Note that the `__init__py` files that you see in the directory structure (and the directory structure itself) are there to enable test discovery. Don't move things around or delete any `__init__.py` files, unless you know that you really want to.
+Note that the `__init__.py` files that you see in the directory structure (and the directory structure itself) are there to enable test discovery. Don't move things around or delete any `__init__.py` files, unless you know that you really want to.
 
 ### Test Frameworks
 
@@ -116,7 +135,7 @@ To run all unit tests:
 1.  Navigate to the root directory of this repo in your terminal
 2.  Do one of the below:
 
-> :point_up: Remember that we're using Python 3. Don't forget to type `python`, and don't forget the `-m` bit.
+> :point_up: Remember that we're using Python 3. Don't forget to type `python3` (not python), and don't forget the `-m` bit.
 
 #### pytest
 
