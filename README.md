@@ -78,7 +78,7 @@ There are two html files in here:
 
 Examples of solutions to the exercises that you can use to compare against your own work or to peek at when you're stuck.
 
-Feel free to recommend your solution(s) via pull request if you come up with anything better, cleaner, clearer, more-pythonic, etc. Please use `doctype` to document your solutions, instead of comments.
+Feel free to recommend your solution(s) via a pull request if you come up with anything better, cleaner, clearer, more-pythonic, etc. Please use `doctype` to document your solutions, instead of comments.
 
 Example:
 
