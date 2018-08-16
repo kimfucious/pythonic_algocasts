@@ -17,11 +17,11 @@ class LinkedListTests(unittest.TestCase):
 
     def test_node_creation(self):
         """
-        Tests that Node class has properties of 'data' and 'next_node'
+        Tests that Node class has properties of 'data' and 'next'
         """
         node = Node("a", "b")
         self.assertEqual(node.data, "a")
-        self.assertEqual(node.next_node, "b")
+        self.assertEqual(node.next, "b")
 
 
 # @unittest.skip("Clear List Tests")
@@ -128,10 +128,10 @@ class GetLastTests(unittest.TestCase):
         l = LinkedList()
         l.insert_first(2)
         self.assertEqual(l.get_last().data, 2)
-        self.assertEqual(l.get_last().next_node, None)
+        self.assertEqual(l.get_last().next, None)
         l.insert_first(1)
         self.assertEqual(l.get_last().data, 2)
-        self.assertEqual(l.get_last().next_node, None)
+        self.assertEqual(l.get_last().next, None)
 
 
 # @unittest.skip("Insert At Tests")
@@ -271,7 +271,7 @@ class RemoveLastTests(unittest.TestCase):
         l.remove_last()
         self.assertEqual(l.size(), 1)
         self.assertEqual(l.get_last().data, "a")
-        self.assertEqual(l.get_last().next_node, None)
+        self.assertEqual(l.get_last().next, None)
 
     # @unittest.skip("skip")
     def test_remove_last_3(self):

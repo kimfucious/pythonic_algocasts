@@ -10,13 +10,13 @@ This repo is also not a substitute for the ton of material he covers throughout 
 
 - Oodles of exercises to practice challenging coding questions
 - Extensive unit tests to verify your solutions
-- Example solutions for every exercise
+- Example solutions (often more than one) for every exercise
 
 ## Requirements
 
-- [Python 3](https://www.python.org/downloads/): some tests won't work if you use Python 2
-- An testing framework: nose, pytest, or unnitest
-- A text editor: Atom, Sublime Text, Vim, Visual Studio Code, etc.
+- [Python 3](https://www.python.org/downloads/):  some tests won't work if you use Python 2
+- An testing framework:  nose, pytest, or unnitest
+- A text editor:  Atom, Sublime Text, Vim, Visual Studio Code, etc.
 - A terminal
 
 > :floppy_disk:  If you're running Windows 10 try [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).

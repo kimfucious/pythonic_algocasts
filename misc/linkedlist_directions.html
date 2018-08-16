@@ -1,5 +1,6 @@
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </link>
   <style>
     pre,
     code {
@@ -27,17 +28,18 @@
         <td>(Data, Node)</td>
         <td>Node</td>
         <td>
-          Creates a class instance to represent a node. The node should have two properties, 'data' and 'next_node'. Accept both of
-          these as arguments to the 'Node' constructor, then assign them to the instance as properties 'data' and 'next_node'.
-          If 'next_node' is not provided to the constructor, then default its value to be 'None'.
+          Creates a class instance to represent a node. The node should have two properties, 'data' and 'next'. Accept both of these
+          as arguments to the 'Node' constructor, then assign them to the instance as properties 'data' and 'next'. If 'next'
+          is not provided to the constructor, then default its value to be 'None'. Lastly, Python does have built-in function
+          called next(). This may confuse the sytax highlighter in your text editor, but it's safe to use next here.
         </td>
         <td>
           <pre>
             const n = new Node('There');
             n.data // 'Hi'
-            n.next_node // None
+            n.next // None
             const n2 = new Node('Hi', n);
-            n.next_node // returns n
+            n.next // returns n
           </pre>
         </td>
       </tr>

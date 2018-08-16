@@ -21,9 +21,9 @@ class CircularTests(unittest.TestCase):
         c = Node("c")
 
         l.head = a
-        a.next_node = b
-        b.next_node = c
-        c.next_node = b
+        a.next = b
+        b.next = c
+        c.next = b
 
         self.assertTrue(circular(l))
 
@@ -37,9 +37,9 @@ class CircularTests(unittest.TestCase):
         c = Node("c")
 
         l.head = a
-        a.next_node = b
-        b.next_node = c
-        c.next_node = None
+        a.next = b
+        b.next = c
+        c.next = None
 
         self.assertFalse(circular(l))
 

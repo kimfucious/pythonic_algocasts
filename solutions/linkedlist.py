@@ -4,9 +4,9 @@
 
 
 class Node:
-    def __init__(self, data, next_node=None):
+    def __init__(self, data, next=None):
         self.data = data
-        self.next_node = next_node
+        self.next = next
 
 
 class LinkedList:
@@ -17,7 +17,7 @@ class LinkedList:
         node = self.head
         while node:
             yield node
-            node = node.next_node
+            node = node.next
 
     def clear(self):
         self.head = None
@@ -28,7 +28,7 @@ class LinkedList:
         node = self.head
         while node:
             fn(node)
-            node = node.next_node
+            node = node.next
 
     def get_at(self, index):
         counter = 0
@@ -37,7 +37,7 @@ class LinkedList:
             if counter == index:
                 return node
             counter += 1
-            node = node.next_node
+            node = node.next
         return None
 
     def get_first(self):
@@ -48,9 +48,9 @@ class LinkedList:
             return None
         node = self.head
         while node:
-            if not node.next_node:
+            if not node.next:
                 return node
-            node = node.next_node
+            node = node.next
 
     def insert_first(self, data):
         self.head = Node(data, self.head)
@@ -63,12 +63,12 @@ class LinkedList:
             self.head = Node(data, self.head)
             return
         prev = self.get_at(index - 1) or self.get_last()
-        prev.next_node = Node(data, prev.next_node)
+        prev.next = Node(data, prev.next)
 
     def insert_last(self, data):
         last = self.get_last()
         if last:
-            last.next_node = Node(data)
+            last.next = Node(data)
         else:
             self.head = Node(data)
 
@@ -76,35 +76,35 @@ class LinkedList:
         if not self.head:
             return None
         if index == 0:
-            self.head = self.head.next_node
+            self.head = self.head.next
             return
         prev = self.get_at(index - 1)
-        if not prev or not prev.next_node:
+        if not prev or not prev.next:
             return
-        prev.next_node = prev.next_node.next_node
+        prev.next = prev.next.next
 
     def remove_first(self):
         if not self.head:
             return
-        self.head = self.head.next_node
+        self.head = self.head.next
 
     def remove_last(self):
         if not self.head:
             return None
-        if not self.head.next_node:
+        if not self.head.next:
             self.head = None
             return
         prev = self.head
-        node = self.head.next_node
-        while node.next_node:
+        node = self.head.next
+        while node.next:
             prev = node
-            node = node.next_node
-        prev.next_node = None
+            node = node.next
+        prev.next = None
 
     def size(self):
         counter = 0
         node = self.head
         while node:
             counter += 1
-            node = node.next_node
+            node = node.next
         return counter

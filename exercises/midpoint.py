@@ -13,5 +13,12 @@
 #   midpoint(l); # returns { data: 'b' }
 
 
-def midpoint(lst):
-    pass
+def midpoint(l):
+    slow = l.get_first()
+    fast = l.get_first()
+
+    while fast.next and fast.next.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    return slow

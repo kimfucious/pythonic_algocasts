@@ -3,7 +3,7 @@ from exercises.midpoint import midpoint
 from helpers.linkedlist import Node, LinkedList
 
 
-@unittest.skip("skip midpoint tests")
+# @unittest.skip("skip midpoint tests")
 class MidpointTests(unittest.TestCase):
     def test_function_exists(self):
         # midpoint function exists
@@ -11,13 +11,11 @@ class MidpointTests(unittest.TestCase):
 
     def test_midpoint_odd(self):
         l = LinkedList()
-        l.insertLast("a")
-        l.insertLast("b")
-        l.insertLast("c")
+        l.insert_last("a")
+        l.insert_last("b")
+        l.insert_last("c")
         self.assertEqual(
-            midpoint((l).data),
-            "b"
-        )
+            midpoint(l).data, "b")
 
 
 if __name__ == "__main__":
