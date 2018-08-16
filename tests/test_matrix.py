@@ -2,7 +2,7 @@ import unittest
 from exercises.matrix import matrix
 
 
-@unittest.skip("skip matrix tests")
+# @unittest.skip("skip matrix tests")
 class MatrixTests(unittest.TestCase):
     def test_function_exists(self):
         # matrix function exists
