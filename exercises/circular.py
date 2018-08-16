@@ -1,17 +1,24 @@
 # --- Directions
-# Given a linked list, return true if the list
-# is circular, false if it is not.
+# Given a linked list, return True if the list is circular, False if it is not.
 # --- Examples
-#   const l = new List();
-#   const a = new Node('a');
-#   const b = new Node('b');
-#   const c = new Node('c');
-#   l.head = a;
-#   a.next = b;
-#   b.next = c;
-#   c.next = b;
-#   circular(l) # true
+#   l = LinkedList()
+#   a = Node('a')
+#   b = Node('b')
+#   c = Node('c')
+#   l.head = a
+#   a.next = b
+#   b.next = c
+#   c.next = b
+#   circular(l) # True
 
 
-def circular(list):
-    pass
+def circular(l):
+    slow = l.get_at(0)
+    fast = l.get_at(0)
+
+    while fast.next and fast.next.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return False
+    return True

@@ -1,12 +1,11 @@
 # --- Directions
-# Given an integer, return an integer that is the reverse
-# ordering of numbers.
+# Given an integer, return an integer that is the reverse ordering of numbers.
 # --- Examples
-#   reverseInt(15) === 51
-#   reverseInt(981) === 189
-#   reverseInt(500) === 5
-#   reverseInt(-15) === -51
-#   reverseInt(-90) === -9
+#   reverseInt(15)  # returns 51
+#   reverseInt(981) # returns 189
+#   reverseInt(500) # returns 5
+#   reverseInt(-15) # returns -51
+#   reverseInt(-90) # returns -9
 
 from math import copysign
 

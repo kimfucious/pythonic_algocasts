@@ -3,7 +3,7 @@ from exercises.circular import circular
 from helpers.linkedlist import Node, LinkedList
 
 
-@unittest.skip("skip circular tests")
+# @unittest.skip("skip circular tests")
 class CircularTests(unittest.TestCase):
     def test_node_class_exists(self):
         """

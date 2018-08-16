@@ -108,15 +108,3 @@ class LinkedList:
             counter += 1
             node = node.next
         return counter
-
-
-def fn(node):
-    node.data += 10
-
-
-l = LinkedList()
-l.insert_last(1)
-l.insert_last(2)
-l.insert_last(3)
-l.insert_last(4)
-l.for_each(fn)

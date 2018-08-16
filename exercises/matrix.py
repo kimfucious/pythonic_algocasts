@@ -1,6 +1,5 @@
 # --- Directions
-# Write a function that accepts an integer N
-# and returns a NxN spiral matrix.
+# Write a function that accepts an integer, n, and returns a n x n spiral matrix.
 # --- Examples
 #   matrix(2)
 #     [[1, 2],
@@ -18,11 +17,10 @@
 
 def matrix(n):
     """
-    Need to create an array of n x n filled with None to avoid
-    'IndexError: list index out of range' issues when using this technique
-    Also note the +1s and -1s on the ranges, as the second argument in a range
-    is non-inclusive. 
-    There are other ways to do this, but they make my head explode:
+    Need to create an array of n x n filled with None to avoid 'IndexError: list
+    index out of range' issues when using this technique Also note the +1s and
+    -1s on the ranges, as the second argument in a range is non-inclusive. There
+    are other ways to do this, but they make my head explode:
     https://rosettacode.org/wiki/Spiral_matrix#Python
     """
     spiral = [[None] * n for j in range(n)]
