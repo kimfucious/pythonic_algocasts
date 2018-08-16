@@ -2,7 +2,7 @@ import unittest
 from exercises.linkedlist import LinkedList, Node
 
 
-@unittest.skip("skip")
+# @unittest.skip("skip")
 class LinkedListTests(unittest.TestCase):
     def test_node_class_exists(self):
         """
@@ -25,7 +25,7 @@ class LinkedListTests(unittest.TestCase):
         self.assertEqual(node.next, "b")
 
 
-@unittest.skip("Clear List Tests")
+# @unittest.skip("Clear List Tests")
 class ClearTests(unittest.TestCase):
     def test_clear(self):
         """
@@ -42,7 +42,7 @@ class ClearTests(unittest.TestCase):
         self.assertEqual(l.size(), 0)
 
 
-@unittest.skip("ForEach Tests")
+# @unittest.skip("ForEach Tests")
 class ForEachTests(unittest.TestCase):
     def test_for_each(self):
         """
@@ -62,7 +62,7 @@ class ForEachTests(unittest.TestCase):
         self.assertEqual(l.get_at(3).data, 14)
 
 
-@unittest.skip("For In Tests")
+# @unittest.skip("For In Tests")
 class ForInTests(unittest.TestCase):
     def test_for_in_loop_on_linked_list(self):
         """
@@ -83,7 +83,7 @@ class ForInTests(unittest.TestCase):
         self.assertEqual(l.get_at(3).data, 14)
 
 
-@unittest.skip("Get At Tests")
+# @unittest.skip("Get At Tests")
 class GetAtTests(unittest.TestCase):
     def test_get_at_out_of_bounds(self):
         """
@@ -107,7 +107,7 @@ class GetAtTests(unittest.TestCase):
         self.assertEqual(l.get_at(3).data, 4)
 
 
-@unittest.skip("Get First Tests")
+# @unittest.skip("Get First Tests")
 class GetFirstTests(unittest.TestCase):
     def test_get_first(self):
         """
@@ -120,7 +120,7 @@ class GetFirstTests(unittest.TestCase):
         self.assertEqual(l.get_first().data, 2)
 
 
-@unittest.skip("Get Last Tests")
+# @unittest.skip("Get Last Tests")
 class GetLastTests(unittest.TestCase):
     def test_get_last(self):
         """
@@ -135,7 +135,7 @@ class GetLastTests(unittest.TestCase):
         self.assertEqual(l.get_last().next, None)
 
 
-@unittest.skip("Insert At Tests")
+# @unittest.skip("Insert At Tests")
 class InsertAtTests(unittest.TestCase):
     def test_insert_at_0_on_empty_list(self):
         """
@@ -200,7 +200,7 @@ class InsertAtTests(unittest.TestCase):
         self.assertEqual(l.get_at(2).data, "hi")
 
 
-@unittest.skip("Insert First Tests")
+# @unittest.skip("Insert First Tests")
 class InsertFirstTests(unittest.TestCase):
 
     def test_insert_first(self):
@@ -214,7 +214,7 @@ class InsertFirstTests(unittest.TestCase):
         self.assertEqual(l.head.data, 2)
 
 
-@unittest.skip("Remove First Tests")
+# @unittest.skip("Remove First Tests")
 class RemoveFirstTests(unittest.TestCase):
     def test_remove_first_size_1(self):
         """
@@ -242,7 +242,7 @@ class RemoveFirstTests(unittest.TestCase):
         self.assertEqual(l.get_first().data, "c")
 
 
-@unittest.skip("Remove Last Tests")
+# @unittest.skip("Remove Last Tests")
 class RemoveLastTests(unittest.TestCase):
     def test_remove_last_empty(self):
         """
@@ -261,7 +261,7 @@ class RemoveLastTests(unittest.TestCase):
         l.remove_last()
         self.assertEqual(l.head, None)
 
-    @unittest.skip("skip")
+    # @unittest.skip("skip")
     def test_remove_last_2(self):
         """
         Tests the removal of last node in a list with two nodes 
@@ -274,7 +274,7 @@ class RemoveLastTests(unittest.TestCase):
         self.assertEqual(l.get_last().data, "a")
         self.assertEqual(l.get_last().next, None)
 
-    @unittest.skip("skip")
+    # @unittest.skip("skip")
     def test_remove_last_3(self):
         """
         Tests the removal of last node in a list with three nodes 
@@ -288,7 +288,7 @@ class RemoveLastTests(unittest.TestCase):
         self.assertEqual(l.get_last().data, "b")
 
 
-@unittest.skip("Insert Last Tests")
+# @unittest.skip("Insert Last Tests")
 class InsertLastTests(unittest.TestCase):
     def test_insert_last(self):
         """
@@ -301,7 +301,7 @@ class InsertLastTests(unittest.TestCase):
         self.assertEqual(l.get_last().data, "b")
 
 
-@unittest.skip("Remove At Tests")
+# @unittest.skip("Remove At Tests")
 class RemoveAtTests(unittest.TestCase):
     def test_remove_at_out_of_bounds(self):
         """ 
@@ -339,7 +339,7 @@ class RemoveAtTests(unittest.TestCase):
         self.assertEqual(l.get_at(1).data, 3)
 
 
-@unittest.skip("Size Tests")
+# @unittest.skip("Size Tests")
 class SizeTests(unittest.TestCase):
     def test_size(self):
         """
