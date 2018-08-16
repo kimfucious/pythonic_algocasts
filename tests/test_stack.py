@@ -2,7 +2,7 @@ import unittest
 from exercises.stack import Stack
 
 
-@unittest.skip("skip stack tests")
+# @unittest.skip("skip stack tests")
 class StackTests(unittest.TestCase):
     def test_stack_is_callable(self):
         """
