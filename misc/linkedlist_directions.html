@@ -11,362 +11,364 @@
 </head>
 
 <body>
-  <h1>Node Class API</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <td>Function</td>
-        <td>Arguments</td>
-        <td>Returns</td>
-        <td>Directions</td>
-        <td>Example</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Node.constructor</td>
-        <td>(Data, Node)</td>
-        <td>Node</td>
-        <td>
-          Creates a class instance to represent a node. The node should have two properties, 'data' and 'next'. Accept both of these
-          as arguments to the 'Node' constructor, then assign them to the instance as properties 'data' and 'next'. If 'next'
-          is not provided to the constructor, then default its value to be 'None'. Lastly, Python does have built-in function
-          called next(). This may confuse the sytax highlighter in your text editor, but it's safe to use next here.
-        </td>
-        <td>
-          <pre>
-            const n = new Node('There');
-            n.data // 'Hi'
-            n.next // None
-            const n2 = new Node('Hi', n);
-            n.next // returns n
+  <div class="container">
+    <h1>Node Class API</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Function</td>
+          <td>Arguments</td>
+          <td>Returns</td>
+          <td>Directions</td>
+          <td>Example</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Node definition</td>
+          <td>(Data, Node)</td>
+          <td>Node</td>
+          <td>
+            Creates a class instance to represent a node. The node should have two data attributes, 'data' and 'next'. Accept both of
+            these as arguments to the 'Node' __init__() method, then assign them to the instance as data attributes 'data'
+            and 'next'. If 'next' is not provided to the __init__ method, then default its value to be 'None'. Lastly, Python
+            does have built-in function called next(). This may confuse the sytax highlighter in your text editor, but it's
+            safe to use next here.
+          </td>
+          <td>
+            <pre>
+            n = Node('There')
+            n.data # 'Hi'
+            n.next # None
+            n2 = Node('Hi', n)
+            n.next # returns n
           </pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h1>LinkedList Class API</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <td>Function</td>
-        <td>Arguments</td>
-        <td>Returns</td>
-        <td>Directions</td>
-        <td>Example</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>constructor</td>
-        <td>-</td>
-        <td>(LinkedList)</td>
-        <td>
-          Create a class to represent a linked list. When created, a linked list should have *no* head node associated with it. The
-          LinkedList instance will have one property, 'head', which is a reference to the first node of the linked list.
-          By default 'head' should be 'null'.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.head // null
+    <h1>LinkedList Class API</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Function</td>
+          <td>Arguments</td>
+          <td>Returns</td>
+          <td>Directions</td>
+          <td>Example</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>constructor</td>
+          <td>-</td>
+          <td>(LinkedList)</td>
+          <td>
+            Create a class to represent a linked list. When created, a linked list should have *no* head node associated with it. The
+            LinkedList instance will have one data attribute, 'head', which is a reference to the first node of the linked
+            list. By default 'head' should be 'None'.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.head # None
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>insert_first</td>
-        <td>(data)</td>
-        <td>-</td>
-        <td>
-          Creates a new Node from argument 'data' and assigns the resulting node to the 'head' property. Make sure to handle the case
-          in which the linked list already has a node assigned to the 'head' property.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('Hi There'); // List has one node
+          </td>
+        </tr>
+        <tr>
+          <td>insert_first</td>
+          <td>(data)</td>
+          <td>-</td>
+          <td>
+            Creates a new Node from argument 'data' and assigns the resulting node to the 'head' data attribute. Make sure to handle
+            the case in which the linked list already has a node assigned to the 'head' data attribute.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('Hi There') # List has one node
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>size</td>
-        <td>-</td>
-        <td>(integer)</td>
-        <td>
-          Returns the number of nodes in the linked list.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.insert_first('c');
-            list.size(); // returns 3
+          </td>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td>-</td>
+          <td>(integer)</td>
+          <td>
+            Returns the number of nodes in the linked list.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.insert_first('c')
+            l.size() # returns 3
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>get_first</td>
-        <td>-</td>
-        <td>(Node)</td>
-        <td>
-          Returns the first node of the linked list.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.get_first(); // returns Node instance with data 'a'
+          </td>
+        </tr>
+        <tr>
+          <td>get_first</td>
+          <td>-</td>
+          <td>(Node)</td>
+          <td>
+            Returns the first node of the linked list.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.get_first() # returns Node instance with data 'a'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          get_last
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          (Node)
-        </td>
-        <td>
-          Returns the last node of the linked list
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.get_last(); // returns node with data 'a'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            get_last
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            (Node)
+          </td>
+          <td>
+            Returns the last node of the linked list
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.get_last() # returns node with data 'a'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          clear
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Empties the linked list of any nodes.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.clear();
-            list.size(); // returns 0
+          </td>
+        </tr>
+        <tr>
+          <td>
+            clear
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Empties the linked list of any nodes.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.clear()
+            l.size() # returns 0
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          remove_first
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Removes only the first node of the linked list. The list's head should now be the second element.
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.remove_first();
-            list.get_first(); // returns node with data 'a'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            remove_first
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Removes only the first node of the linked list. The list's head should now be the second element.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.remove_first()
+            l.get_first() # returns node with data 'a'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          remove_last
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Removes the last node of the chain
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.remove_last();
-            list.size(); // returns 1
-            list.get_last(); // returns node with data of 'b'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            remove_last
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Removes the last node of the linked list
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.remove_last()
+            l.size() # returns 1
+            l.get_last() # returns node with data of 'b'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          insert_last
-        </td>
-        <td>
-          (Data)
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Inserts a new node with provided data at the end of the chain
-        </td>
-        <td>
-          <pre>
-            const list = new LinkedList();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.insert_last('c');
-            list.get_last(); // returns node with data 'C'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            insert_last
+          </td>
+          <td>
+            (Data)
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Inserts a new node with provided data at the end of the chain
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.insert_last('c')
+            l.get_last() # returns node with data 'C'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          get_at
-        </td>
-        <td>
-          (integer)
-        </td>
-        <td>
-          (Node)
-        </td>
-        <td>
-          Returns the node at the provided index
-        </td>
-        <td>
-          <pre>
-            const list = new List();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.insert_first('c');
-            list.get_at(1); // returns node with data 'b'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            get_at
+          </td>
+          <td>
+            (integer)
+          </td>
+          <td>
+            (Node)
+          </td>
+          <td>
+            Returns the node at the provided index
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.insert_first('c')
+            l.get_at(1) # returns node with data 'b'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          remove_at
-        </td>
-        <td>
-          (integer)
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Removes node at the provided index
-        </td>
-        <td>
-          <pre>
-            const list = new List();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.insert_first('c');
-            list.remove_at(1);
-            list.get_at(1); // returns node with data 'a'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            remove_at
+          </td>
+          <td>
+            (integer)
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Removes node at the provided index
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.insert_first('c')
+            l.remove_at(1)
+            l.get_at(1) # returns node with data 'a'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          insert_at
-        </td>
-        <td>
-          (Data, integer)
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Create an insert a new node at provided index. If index is out of bounds, add the node to the end of the list.
-        </td>
-        <td>
-          <pre>
-            const list = new List();
-            list.insert_first('a');
-            list.insert_first('b');
-            list.insert_first('c');
-            list.insert_at('Hi', 1)
-            list.get_at(1); // returns node with data 'Hi'
+          </td>
+        </tr>
+        <tr>
+          <td>
+            insert_at
+          </td>
+          <td>
+            (Data, integer)
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Create an insert a new node at provided index. If index is out of bounds, add the node to the end of the list.
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_first('a')
+            l.insert_first('b')
+            l.insert_first('c')
+            l.insert_at('Hi', 1)
+            l.get_at(1) # returns node with data 'Hi'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          for_each
-        </td>
-        <td>
-          (function)
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Calls the provided function with every node of the chain
-        </td>
-        <td>
-          <pre>
-            const list = new List();
+          </td>
+        </tr>
+        <tr>
+          <td>
+            for_each
+          </td>
+          <td>
+            (function)
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Calls the provided function with every node of the chain
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_last(1)
+            l.insert_last(2)
+            l.insert_last(3)
+            l.insert_last(4)
 
-            list.insert_last(1);
-            list.insert_last(2);
-            list.insert_last(3);
-            list.insert_last(4);
+            def fn(node):
+                node.data += 10
+                
+            l.for_each(fn)
 
-            list.for_each(node => {
-              node.data += 10;
-            });
-            list.get_at(0); // Returns node with data '11'
+            l.get_at(0) # Returns node with data '11'
           </pre>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          for...of Loop
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          -
-        </td>
-        <td>
-          Linked list should be compatible as the subject of a 'for...of' loop
-        </td>
-        <td>
-          <pre>
-            const list = new List();
+          </td>
+        </tr>
+        <tr>
+          <td>
+            for...of Loop
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            -
+          </td>
+          <td>
+            Linked list should be compatible as the subject of a 'for...in' loop
+          </td>
+          <td>
+            <pre>
+            l = LinkedList()
+            l.insert_last(1)
+            l.insert_last(2)
+            l.insert_last(3)
+            l.insert_last(4)
 
-            list.insert_last(1);
-            list.insert_last(2);
-            list.insert_last(3);
-            list.insert_last(4);
+            for node in l:
+                node.data += 10
 
-            for (let node of list) {
-              node.data += 10;
-            }
-
-            node.get_at(1); // returns node with data 11
+            node.get_at(1) # returns node with data 11
           </pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>

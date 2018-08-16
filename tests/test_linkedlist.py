@@ -62,7 +62,7 @@ class ForEachTests(unittest.TestCase):
 
 
 # @unittest.skip("For In Tests")
-class ForOfTests(unittest.TestCase):
+class ForInTests(unittest.TestCase):
     def test_for_in_loop_on_linked_list(self):
         """
         Tests that a for of loop will work on a linked list
