@@ -4,7 +4,7 @@ from io import StringIO
 from exercises.pyramid_recursive import pyramid
 
 
-@unittest.skip("skip pyramid tests")
+# @unittest.skip("skip pyramid tests")
 class PyramidTests(unittest.TestCase):
     def test_function_exists(self):
         # pyramid function exists
