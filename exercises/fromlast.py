@@ -11,5 +11,10 @@
 #    from_last(l, 2).data # 'b'
 
 
-def from_last(list, n):
-    pass
+def from_last(l, n):
+    slow = l.get_at(0)
+    fast = l.get_at(n)
+    while fast.next:
+        slow = slow.next
+        fast = fast.next
+    return slow

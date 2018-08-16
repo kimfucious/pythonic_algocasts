@@ -3,7 +3,7 @@ from exercises.fromlast import from_last
 from helpers.linkedlist import Node, LinkedList
 
 
-@unittest.skip("skip from_last tests")
+# @unittest.skip("skip from_last tests")
 class FromLastTests(unittest.TestCase):
     def test_from_last_is_callable(self):
         """
@@ -21,7 +21,7 @@ class FromLastTests(unittest.TestCase):
         l.insert_last("c")
         l.insert_last("d")
         l.insert_last("e")
-        self.assertEqual(from_last(l, 3), "b")
+        self.assertEqual(from_last(l, 3).data, "b")
 
 
 if __name__ == "__main__":
