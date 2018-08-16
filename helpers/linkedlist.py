@@ -1,6 +1,6 @@
-# --- Directions
-# Implement classes Node and Linked Lists
-# See 'directions' document
+#  This is a helper for the circular, fromlast, midpoint excercises.  No need to
+#  change anything here.  If you do, it might break the tests for those
+#  exercises.
 
 
 class Node:

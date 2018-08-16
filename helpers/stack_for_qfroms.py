@@ -1,3 +1,7 @@
+#  This is a helper for the qfroms exercise.  No need to change anything here.
+#  If you do, it might break the tests.
+
+
 class Stack:
     def __init__(self):
         self.data = []

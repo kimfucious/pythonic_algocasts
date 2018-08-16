@@ -1,3 +1,7 @@
+#  This is a helper for the validate exercise.  No need to change anything here.
+#  If you do, it might break the tests.
+
+
 class Node:
     def __init__(self, data):
         self.data = data

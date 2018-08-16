@@ -11,7 +11,7 @@
 #     q.remove() # returns 1
 #     q.remove() # returns 2
 
-from helpers.stack import Stack
+from helpers.stack_for_qfroms import Stack
 
 
 class Queue:

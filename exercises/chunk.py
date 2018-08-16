@@ -11,8 +11,7 @@
 
 def chunk(array, size):
     """
-    Using while until the array is empty
-    Emptying out the array using del 
+    Using while until the array is empty Emptying out the array using del 
     """
     chunked = []
     while len(array) > 0:
