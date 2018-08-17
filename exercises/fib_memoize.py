@@ -5,6 +5,9 @@
 # ten entries of the fibonacci series.
 # Example:
 #   fib(4) # returns 3
+# NOTE: The above sequence starts at 0.  Stephen's tests assert that the
+# solutions are working with a series that starts with 1.  I may change these
+# later, but for now, assume 1, not zero.
 
 
 def fib(n):
