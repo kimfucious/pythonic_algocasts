@@ -2,7 +2,7 @@
 
 This repo contains Pythonic versions of exercises based on **Stephen Grider's** [_The Coding Interview Bootcamp: Algorithms + Datastructures_](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/?couponCode=4MORE1234) found on Udemy.
 
-This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.
+This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.  I pinged him about doing this, but didn't get a response.  
 
 This repo is also not a substitute for the ton of material he covers, erudite teaching he provides, and the practical experience he shares throughout the course lectures. So go buy it if you really want a good start toward learning these the concepts behind these exercises (in JavaScript).
 
@@ -77,6 +77,8 @@ There are two html files in here:
 ### Reports
 
 > :boom: These reports aren't working yet.
+
+I'll fix this if/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through.
 
 This is an empty directory where HTML test reports will be generated from HTMLTestRunner.
 
