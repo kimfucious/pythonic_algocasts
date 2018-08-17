@@ -3,8 +3,10 @@ from exercises.anagrams import anagrams
 
 
 class AnagramsTests(unittest.TestCase):
-    def test_function_exists(self):
-        # anagrams function exists
+    def test_anagram_function_exists(self):
+        """
+        anagrams function exists
+        """
         self.assertTrue(callable(anagrams))
 
     def test_anagrams_1(self):

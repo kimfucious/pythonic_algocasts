@@ -20,7 +20,7 @@
 #    q.remove() # returns 2
 #    q.remove() # returns "There"
 
-from helpers.queue import Queue
+from helpers.queue_for_weave import Queue
 
 
 def weave(sourceOne, sourceTwo):

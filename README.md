@@ -4,7 +4,7 @@ This repo contains Pythonic versions of exercises based on **Stephen Grider's** 
 
 This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.
 
-This repo is also not a substitute for the ton of material he covers throughout the course lectures. So go buy it, if you really want a good start toward learning these the concepts behind these exercises (in JavaScript).
+This repo is also not a substitute for the ton of material he covers, erudite teaching he provides, and the practical experience he shares throughout the course lectures. So go buy it if you really want a good start toward learning these the concepts behind these exercises (in JavaScript).
 
 ## Features
 
@@ -71,8 +71,22 @@ Some of the exercies rely on pre-built components (probably not the right word),
 
 There are two html files in here:
 
-1.  The `events_example.html` file is for the events exercise. Frankly, you won't get much out of this, unless you have access to Stephen's course.
+1.  The `events_example.html` file is for the events exercise. Frankly, you won't get much out of this unless you have access to Stephen's course.
 2.  The `linkedlist_directions.html` file is a set of instructions for the fairly long linked list exercise.
+
+### Reports
+
+> :boom: These reports aren't working yet.
+
+This is an empty directory where HTML test reports will be generated from HTMLTestRunner.
+
+At present, I'm working on beta version that isn't quite giving me the combined results that I'm hoping for.
+
+To generate HTML reports, run the following from the root directory:
+
+```shell
+python3 run_all_tests.py
+```
 
 ### Solutions
 
@@ -89,16 +103,15 @@ def function(x):
   You can read about those things at http://kittensrainbowsandlambdas.org
   """
   pass
-  """
 ```
 
-> :see_no_evil:  Solutions containing advertisements or other forms of spam/self-promotion won't be considered. This is a learning repo, not a marketplace.
+> :see_no_evil:  Solutions containing advertisements or other forms of spam/self-promotion won't be considered. This is a learning space, not a marketplace.
 
 ### Tests
 
 There is one test file for each exercise. The naming convention should make it evident as to what tests what.
 
-All of the test files should be considered done, meaning that you should not need to edit any of them. They should _just work_ are just there to test the solutions that you create for the exercises.
+All of the test files should be considered done, meaning that you should not need to edit any of them. They should _just work_ and are just there to test the solutions that you create for the exercises.
 
 > :beetle:  If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
 
@@ -151,14 +164,21 @@ python3 -m unittest
 
 To run an individual unit test:
 
+
+1.  Navigate to the root directory of this repo.
+2.  Run either of the below, where `exercise.py` is the name of thing you're trying to test, like `test_anagrams.py`, for example.
+
+> :push-pin:  You can also navigate to the tests directory, and run `python3 -m pytest test_excercise.py`.
+
 #### pytest
 
-1.  Navigate to `tests` directory
-2.  Run `python3 -m pytest test_excercise.py`, where exercise is the name of the thing you're trying to test. For example, test_anagrams.py
+`python3 -m pytest tests/test_excercise.py`
 
 #### unittest
 
-Apparently, you can't run a single unit test using unittest, without knowing the Class name of the test case. With that in mind, you might decide to either use `pytest` or simply run all tests. The ability to skip tests, makes running all tests, not that bad of a thing. See below for more on that.
+`python3 -m unittest tests/test_excercise.py`
+
+> :bulb:  adding --verbose to either of the two above commands will give you a more output in your test results.
 
 ### Skipping and Un-skipping Tests
 
