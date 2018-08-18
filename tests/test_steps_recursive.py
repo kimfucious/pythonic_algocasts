@@ -5,7 +5,7 @@ from exercises.steps_recursive import steps
 
 
 # @unittest.skip("skip steps tests")
-class StepsTests(unittest.TestCase):
+class StepsRecursiveTests(unittest.TestCase):
     def test_function_exists(self):
         # steps function exists
         self.assertTrue(callable(steps))

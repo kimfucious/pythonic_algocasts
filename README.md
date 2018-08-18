@@ -2,7 +2,9 @@
 
 This repo contains Pythonic versions of exercises based on **Stephen Grider's** [_The Coding Interview Bootcamp: Algorithms + Datastructures_](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/?couponCode=4MORE1234) found on Udemy.
 
-This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.  I pinged him about doing this, but didn't get a response.  
+This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.  
+
+> :information_desk_person: I pinged him about doing this, but didn't get a response.  
 
 This repo is also not a substitute for the ton of material he covers, erudite teaching he provides, and the practical experience he shares throughout the course lectures. So go buy it if you really want a good start toward learning these the concepts behind these exercises (in JavaScript).
 
@@ -76,15 +78,43 @@ There are two html files in here:
 
 ### Reports
 
-> :boom: These reports aren't working yet.
+This is where HTML test reports will be generated.
 
-I'll fix this if/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through.
+I've setup an HTML report generator that will allow you to display the test results in a web browser.
 
-This is an empty directory where HTML test reports will be generated from HTMLTestRunner.
+You can get this going by running the following command from the root of this project.
 
-At present, I'm working on beta version that isn't quite giving me the combined results that I'm hoping for.
+```shell
+python3 reports.py
+```
 
-To generate HTML reports, run the following from the root directory:
+To view the reports, open http://localhost:8080 in your browser, after running the above command.
+
+There are a couple things happening to make this work.
+
+1.  I've setup a test suite containing all of the tests in the `run_all_tests.py` file.
+2.  This file also uses James Sloan's beta version of [HTMLTestRunner](https://github.com/JamesMTSloan/HtmlTestRunner).  I'm using the beta, because James has made it possible to combine multiple test cases into one report.  If/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through, I'll update this project to use the updated release.
+3.  The `reports.py` file launches [livereload](https://livereload.readthedocs.io/en/latest/), which is a dev server that serves up the `test_results.html` file.
+4.  livereload is setup to watch all `*.py` files in the exercises directory.  Any changes to these files, kicks off the `run_all_tests.py` process, which overwrites any existing `test_results.html` file, it then waits a few seconds, and automatically reloads the browser window.
+
+> :point_up:  If you're running into an issue where the browser refreshes before the tests complete, like if you're running fib(39), you can adjust the delay in the `reports.py` file on the line shown below:
+
+```python
+server.watch("./exercises/*.py",
+             shell("python3 run_all_tests.py --quiet"), delay=3)
+```
+
+This process is not perfect.  If there's something really wrong (e.g. SyntaxError) with an exercise solution, the process will crash before any report is generated.  This is usually indicated by something red in the console output, that might resemble this with a bunch of nasty stuff after it, usually ending with the type of error being thrown:
+
+```shell
+[E 180819 00:44:57 server:75]
+```
+
+When this does happen, the report will reload in the browser, but it will be using old data so the results will not be accurate.
+
+At this point, you can try running your tests manually (see [Testing](##Testing) below).
+
+Lastly, to generate HTML reports manually without livereload, run the following from the root directory:
 
 ```shell
 python3 run_all_tests.py
@@ -117,7 +147,7 @@ All of the test files should be considered done, meaning that you should not nee
 
 > :beetle:  If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
 
-Some of the test files contain one or more test cases (i.e. Classes) and these can contain one to several test methods. See the Testing section for more info on tests.
+Some of the test files contain one or more test cases (i.e. Classes) and these can contain one to several test methods. See the [Testing](##Testing) section for more info on tests.
 
 ## Testing
 
@@ -170,7 +200,7 @@ To run an individual unit test:
 1.  Navigate to the root directory of this repo.
 2.  Run either of the below, where `exercise.py` is the name of thing you're trying to test, like `test_anagrams.py`, for example.
 
-> :push-pin:  You can also navigate to the tests directory, and run `python3 -m pytest test_excercise.py`.
+> :pushpin:  You can also navigate to the tests directory, and run `python3 -m pytest test_excercise.py`.
 
 #### pytest
 
@@ -184,7 +214,7 @@ To run an individual unit test:
 
 ### Skipping and Un-skipping Tests
 
-You'll have noticed that all of the tests are skipped when you first try to run them. This is so that you don't see a crap load of failures and/or errors on exercises that you haven't event attempted to work on yet.
+You'll have noticed that all of the tests are skipped when you first try to run them. This is so that you don't see a load of failures and/or errors on exercises that you haven't event attempted to work on yet.
 
 The following line (i.e. decorator) in a test file will skip an entire test case (multiple methods) or single test cases depending on where it's located.
 

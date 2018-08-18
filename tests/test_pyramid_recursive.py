@@ -5,7 +5,7 @@ from exercises.pyramid_recursive import pyramid
 
 
 # @unittest.skip("skip pyramid tests")
-class PyramidTests(unittest.TestCase):
+class PyramidRecursiveTests(unittest.TestCase):
     def test_function_exists(self):
         # pyramid function exists
         self.assertTrue(callable(pyramid))

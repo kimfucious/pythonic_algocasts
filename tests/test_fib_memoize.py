@@ -3,7 +3,7 @@ from exercises.fib_memoize import fib
 
 
 @unittest.skip("skip fib memoize tests")
-class FibonacciTests(unittest.TestCase):
+class FibonacciMemoizedTests(unittest.TestCase):
     def test_fib_exists(self):
         self.assertTrue(callable(fib))
 

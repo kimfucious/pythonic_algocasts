@@ -3,7 +3,7 @@ from exercises.linkedlist import LinkedList, Node
 
 
 # @unittest.skip("skip")
-class LinkedListTests(unittest.TestCase):
+class LinkedListRefactoredTests(unittest.TestCase):
     def test_node_class_exists(self):
         """
         Tests that Node class exists and is callable
