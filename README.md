@@ -93,7 +93,7 @@ To view the reports, open http://localhost:8080 in your browser, after running t
 There are a couple things happening to make this work.
 
 1.  I've setup a test suite containing all of the tests in the `run_all_tests.py` file.
-2.  This file also uses James Sloan's beta version of [HTMLTestRunner](https://github.com/JamesMTSloan/HtmlTestRunner).  I'm using the beta, because James has made it possible to combine multiple test cases into one report.  If/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through, I'll update this project to use the updated release.
+2.  This file also uses James Sloan's beta version of [HTMLTestRunner](https://github.com/JamesMTSloan/HtmlTestRunner).  I'm using the beta, because James has made it possible to combine multiple test cases into one report.  If/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through, I'll update this project to use the updated release.  NOTE:  For now, you'll need to install the beta manually, by cloning James's repo and using `pip install -e` to install it into your environment.
 3.  The `reports.py` file launches [livereload](https://livereload.readthedocs.io/en/latest/), which is a dev server that serves up the `test_results.html` file.
 4.  livereload is setup to watch all `*.py` files in the exercises directory.  Any changes to these files, kicks off the `run_all_tests.py` process, which overwrites any existing `test_results.html` file, it then waits a few seconds, and automatically reloads the browser window.
 
