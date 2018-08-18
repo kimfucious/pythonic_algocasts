@@ -22,7 +22,7 @@ class Node:
 
     def remove(self, data):
         """
-        Using filter with a lambda to filter the children array
+        Using filter with a lambda to filter the children list
         """
         self.children = list(
             filter(lambda node: node.data != data, self.children))

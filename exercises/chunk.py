@@ -9,33 +9,33 @@
 # chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 
-def chunk(array, size):
+def chunk(l, size):
     """
-    Using while until the array is empty Emptying out the array using del 
+    Using while until the list is empty Emptying out the list using del 
     """
     chunked = []
-    while len(array) > 0:
-        chunked.append(array[0:size])
-        del array[0:size]
+    while len(l) > 0:
+        chunked.append(l[0:size])
+        del l[0:size]
     return chunked
 
-# def chunk(array, size):
+# def chunk(l, size):
 #     """
 #     Using while with an index counter
 #     """
 #     chunked = []
 #     index = 0
-#     while index < len(array):
-#         chunked.append(array[index:index+size])
+#     while index < len(l):
+#         chunked.append(l[index:index+size])
 #         index += size
 #     return chunked
 
-# def chunk(array, size):
+# def chunk(l, size):
 #     """
 #     Using interation DOES NOT WORK!
 #     """
 #     chunked = []
-#     for element in array:
+#     for element in l:
 #         last = chunked[len(chunked) - 1]
 #         if not last or len(last) == size:
 #             chunked.append([element])

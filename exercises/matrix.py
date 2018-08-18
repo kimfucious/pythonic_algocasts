@@ -17,7 +17,7 @@
 
 def matrix(n):
     """
-    Need to create an array of n x n filled with None to avoid 'IndexError: list
+    Need to create a list of n x n filled with None to avoid 'IndexError: list
     index out of range' issues when using this technique Also note the +1s and
     -1s on the ranges, as the second argument in a range is non-inclusive. There
     are other ways to do this, but they make my head explode:

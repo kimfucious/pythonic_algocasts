@@ -12,7 +12,7 @@
 def anagrams(stringA, stringB):
     """
     Using regular expression sub() to remove non characters from string
-    with helper function. sorted() returns an array, but no need to join
+    with helper function. sorted() returns a list, but no need to join
     """
     import re
 

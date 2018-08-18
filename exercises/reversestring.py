@@ -15,7 +15,7 @@ def reverse(string):
 # def reverse(string):
 #     """
 #     Using reduce with a lambda right on the string
-#     No need to split into an array in Python
+#     No need to split into a list in Python
 #     But you gotta import reduce from functools to use it
 #     """
 #     from functools import reduce

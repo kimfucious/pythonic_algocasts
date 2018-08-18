@@ -42,7 +42,7 @@ While you can, for the most part, approach these exercises in any order. The cou
 3. Integer Reversal (reverseint)
 4. MaxChars
 5. FizzBuzz
-6. Array Chunking (chunk)
+6. List Chunking (chunk)
 7. Anagrams
 8. Sentance Capitalization (capitalize)
 9. Printing Steps (steps)
@@ -107,7 +107,7 @@ server.watch("./exercises/*.py",
 This process is not perfect.  If there's something really wrong (e.g. SyntaxError) with an exercise solution, the process will crash before any report is generated.  This is usually indicated by something red in the console output, that might resemble this with a bunch of nasty stuff after it, usually ending with the type of error being thrown:
 
 ```shell
-[E 180819 00:44:57 server:75]
+[E 180819 00:44:57 server:75] yadda, yadda, yadda SyntaxError: invalid syntax...
 ```
 
 When this does happen, the report will reload in the browser, but it will be using old data so the results will not be accurate.
