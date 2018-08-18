@@ -3,7 +3,7 @@ from exercises.fromlast import from_last
 from helpers.linkedlist import Node, LinkedList
 
 
-# @unittest.skip("skip from_last tests")
+@unittest.skip("skip from_last tests")
 class FromLastTests(unittest.TestCase):
     def test_from_last_is_callable(self):
         """

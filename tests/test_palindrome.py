@@ -2,6 +2,7 @@ import unittest
 from exercises.palindrome import palindrome
 
 
+@unittest.skip("skip palindromes")
 class PalindromeTests(unittest.TestCase):
     def test_function_exists(self):
         # Palindrome function exists

@@ -2,7 +2,7 @@ import unittest
 from exercises.vowels import vowels
 
 
-# @unittest.skip("skip vowels tests")
+@unittest.skip("skip vowels tests")
 class VowelsTests(unittest.TestCase):
     def test_function_exists(self):
         # vowels function exists

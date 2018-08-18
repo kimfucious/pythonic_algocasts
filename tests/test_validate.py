@@ -3,7 +3,7 @@ from helpers.node_for_validate import Node
 from exercises.validate import validate
 
 
-# @unittest.skip("skip validate binary search tree tests")
+@unittest.skip("skip validate binary search tree tests")
 class ValidateTests(unittest.TestCase):
     def test_function_exists(self):
         # validate function exists

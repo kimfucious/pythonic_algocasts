@@ -13,50 +13,8 @@
 
 
 class Node:
-    def __init__(self, data):
-        self.data = data
-        self.children = []
-
-    def add(self, data):
-        self.children.append(Node(data))
-
-    def remove(self, data):
-        """
-        Using filter with a lambda to filter the children list
-        """
-        self.children = list(
-            filter(lambda node: node.data != data, self.children))
-        #
-        # """
-        # Using list comprehension to filter the existing children list
-        # """
-        # self.children = [node for node in self.children if node.data != data]
-        #
-        # """
-        # Using a for loop
-        # """
-        # for node in self.children:
-        #     if node.data == data:
-        #         self.children.remove(node)
+    pass
 
 
 class Tree:
-    def __init__(self):
-        self.root = None
-
-    def traverse_bf(self, fn):
-        l = [self.root]
-        while l:
-            node = l.pop(0)
-            # l.extend(node.children)
-            l = l + node.children
-            fn(node)
-
-    def traverse_df(self, fn):
-        l = [self.root]
-        while l:
-            node = l.pop(0)
-            # There is no method (that I know of) to extend to the front (i.e.
-            # prepend) a list of elements to a list
-            l = node.children + l
-            fn(node)
+    pass

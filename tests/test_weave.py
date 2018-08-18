@@ -3,6 +3,7 @@ from exercises.weave import weave
 from helpers.queue_for_weave import Queue
 
 
+@unittest.skip("skip weave")
 class WeaveStringTests(unittest.TestCase):
     def test_peek_exists(self):
         # queues have a peek function

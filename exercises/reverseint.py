@@ -11,4 +11,4 @@ from math import copysign
 
 
 def reverse_int(n):
-    return copysign(int((str(abs(n))[::-1])), n)
+    pass

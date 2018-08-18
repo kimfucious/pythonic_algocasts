@@ -18,15 +18,4 @@
 
 
 def steps(n, row=0, step=""):
-    if row == n:
-        return
-    if len(step) == n:
-        print(step)
-        row += 1
-        steps(n, row)
-        return
-    if len(step) <= row:
-        step += "#"
-    else:
-        step += " "
-    steps(n, row, step)
+    pass

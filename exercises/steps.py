@@ -18,32 +18,4 @@
 
 
 def steps(n):
-    """
-    Using nested loops
-    """
-    for row in range(0, n):
-        step = ""
-        for column in range(0, n):
-            if column <= row:
-                step += "#"
-            else:
-                step += " "
-        print(step)
-
-
-# def steps(n):
-#     """
-#     Using a while loop and len(step) instead of column
-#     """
-#     row = 0
-#     step = ""
-#     while row != n:
-#         if len(step) == n:
-#             print(step)
-#             row += 1
-#             step = ""
-#         else:
-#             if len(step) <= row:
-#                 step += "#"
-#             else:
-#                 step += " "
+    pass

@@ -4,6 +4,7 @@ from tests.test_anagrams import AnagramsTests
 from tests.test_bst import BinarySearchTreeTests
 from tests.test_capitalize import CapitalizeTests
 from tests.test_chunk import ChunkTests
+from tests.test_circular import CircularTests
 from tests.test_fib import FibonacciTests
 from tests.test_fib_memoize import FibonacciMemoizedTests
 from tests.test_fizzbuzz import FizzBuzzTests
@@ -34,6 +35,7 @@ loader = unittest.TestLoader()
 anagrams = loader.loadTestsFromTestCase(AnagramsTests)
 bst = loader.loadTestsFromTestCase(BinarySearchTreeTests)
 capitalize = loader.loadTestsFromTestCase(CapitalizeTests)
+circular = loader.loadTestsFromTestCase(CircularTests)
 chunk = loader.loadTestsFromTestCase(ChunkTests)
 fib = loader.loadTestsFromTestCase(FibonacciTests)
 fib_memoize = loader.loadTestsFromTestCase(FibonacciMemoizedTests)
@@ -78,6 +80,7 @@ suite = unittest.TestSuite([
     bst,
     capitalize,
     chunk,
+    circular,
     fib,
     fib_memoize,
     fizzbuzz,

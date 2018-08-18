@@ -2,9 +2,9 @@ import unittest
 from exercises.maxchar import max_char
 
 
-# @unittest.skip("skip max char tests")
+@unittest.skip("skip max char tests")
 class MaxCharTests(unittest.TestCase):
-    def test_function_exists(self):
+    def test_max_char_is_callable(self):
         # max_char function exists
         self.assertTrue(callable(max_char))
 

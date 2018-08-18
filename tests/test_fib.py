@@ -2,7 +2,7 @@ import unittest
 from exercises.fib import fib
 
 
-# @unittest.skip("skip fib tests")
+@unittest.skip("skip fib tests")
 class FibonacciTests(unittest.TestCase):
     def test_fib_exists(self):
         self.assertTrue(callable(fib))

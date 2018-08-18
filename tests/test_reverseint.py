@@ -2,6 +2,7 @@ import unittest
 from exercises.reverseint import reverse_int
 
 
+@unittest.skip("skip reverse int")
 class ReverseIntegerTests(unittest.TestCase):
     def test_reverse_int_exists(self):
         """

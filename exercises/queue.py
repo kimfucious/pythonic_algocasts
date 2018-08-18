@@ -8,11 +8,4 @@
 
 
 class Queue:
-    def __init__(self):
-        self.data = []
-
-    def add(self, data):
-        self.data.insert(0, data)
-
-    def remove(self):
-        return self.data.pop()
+    pass

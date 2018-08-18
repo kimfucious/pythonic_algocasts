@@ -15,25 +15,4 @@ from helpers.stack_for_qfroms import Stack
 
 
 class Queue:
-    def __init__(self):
-        self.stackOne = []
-        self.stackTwo = []
-
-    def add(self, data):
-        self.stackOne.append(data)
-
-    def peek(self):
-        for i in range(0, len(self.stackOne)):
-            self.stackTwo.append(self.stackOne.pop())
-        peek_item = self.stackTwo[-1]
-        for i in range(0, len(self.stackTwo)):
-            self.stackOne.append(self.stackTwo.pop())
-        return peek_item
-
-    def remove(self):
-        for i in range(0, len(self.stackOne)):
-            self.stackTwo.append(self.stackOne.pop())
-        removed_item = self.stackTwo.pop()
-        for i in range(0, len(self.stackTwo)):
-            self.stackOne.append(self.stackTwo.pop())
-        return removed_item
+    pass

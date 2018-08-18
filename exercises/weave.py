@@ -24,10 +24,4 @@ from helpers.queue_for_weave import Queue
 
 
 def weave(sourceOne, sourceTwo):
-    q3 = Queue()
-    while sourceOne.peek() or sourceTwo.peek():
-        if sourceOne.peek():
-            q3.add(sourceOne.delete())
-        if sourceTwo.peek():
-            q3.add(sourceTwo.delete())
-    return q3
+    pass

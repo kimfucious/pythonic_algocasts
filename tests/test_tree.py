@@ -2,7 +2,7 @@ import unittest
 from exercises.tree import Node, Tree
 
 
-# @unittest.skip("skip tree node tests")
+@unittest.skip("skip tree node tests")
 class TreeNodeTests(unittest.TestCase):
     def test_node_is_callable(self):
         self.assertTrue(callable(Node))
@@ -26,7 +26,7 @@ class TreeNodeTests(unittest.TestCase):
         self.assertEqual(len(n.children), 0)
 
 
-# @unittest.skip("skip tree tests")
+@unittest.skip("skip tree tests")
 class TreeTests(unittest.TestCase):
 
     def test_tree_is_callable_(self):

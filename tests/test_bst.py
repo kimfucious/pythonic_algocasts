@@ -2,7 +2,7 @@ import unittest
 from exercises.bst import Node
 
 
-# @unittest.skip("skip bst tests")
+@unittest.skip("skip bst tests")
 class BinarySearchTreeTests(unittest.TestCase):
     def test_node_class_is_callable(self):
         """

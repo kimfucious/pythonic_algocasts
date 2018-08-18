@@ -2,10 +2,9 @@ import unittest
 from exercises.chunk import chunk
 
 
-# @unittest.skip("skip chunk tests")
+@unittest.skip("skip chunk tests")
 class ChunkTests(unittest.TestCase):
-    def test_function_exists(self):
-        # chunk function exists
+    def test_chunk_function_is_callable(self):
         self.assertTrue(callable(chunk))
 
     def test_chunk_10_2(self):

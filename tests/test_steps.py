@@ -4,7 +4,7 @@ from io import StringIO
 from exercises.steps import steps
 
 
-# @unittest.skip("skip steps tests")
+@unittest.skip("skip steps tests")
 class StepsTests(unittest.TestCase):
     def test_function_exists(self):
         # steps function exists

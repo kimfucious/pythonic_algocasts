@@ -2,6 +2,7 @@ import unittest
 from exercises.queue import Queue
 
 
+@unittest.skip("skip queue")
 class QueueTests(unittest.TestCase):
     def test_fib_exists(self):
         self.assertTrue(callable(Queue))

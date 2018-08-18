@@ -3,7 +3,7 @@ from helpers.node_for_level_width import Node
 from exercises.levelwidth import level_width
 
 
-# @unittest.skip("skip level width tests")
+@unittest.skip("skip level width tests")
 class LevelWidthTests(unittest.TestCase):
     def test_level_width_is_callable(self):
         """

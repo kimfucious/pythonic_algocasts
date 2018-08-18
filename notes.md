@@ -1,0 +1,1 @@
+non-circular tests pass even when there is nothing in the function.

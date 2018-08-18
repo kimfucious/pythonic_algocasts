@@ -4,7 +4,7 @@ from io import StringIO
 from exercises.steps_recursive import steps
 
 
-# @unittest.skip("skip steps tests")
+@unittest.skip("skip steps tests")
 class StepsRecursiveTests(unittest.TestCase):
     def test_function_exists(self):
         # steps function exists

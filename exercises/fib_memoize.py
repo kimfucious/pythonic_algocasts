@@ -10,20 +10,5 @@
 # function, so I named it george.
 
 
-def memoize(fn):
-    cache = {}
-
-    def george(*args):
-        if args in cache:
-            return cache[args]
-        else:
-            cache[args] = fn(*args)
-            return cache[args]
-    return george
-
-
-@memoize
 def fib(n):
-    if n < 2:
-        return n
-    return fib(n-1) + fib(n-2)
+    pass

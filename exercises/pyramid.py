@@ -15,13 +15,4 @@
 
 
 def pyramid(n):
-    from math import floor
-    midpoint = floor((n*2-1)/2)
-    for row in range(0, n):
-        step = ""
-        for column in range(0, n*2-1):
-            if column >= midpoint - row and column <= midpoint + row:
-                step += "#"
-            else:
-                step += " "
-        print(step)
+    pass

@@ -2,7 +2,7 @@ import unittest
 from exercises.fib_memoize import fib
 
 
-# @unittest.skip("skip fib memoize tests")
+@unittest.skip("skip fib memoize tests")
 class FibonacciMemoizedTests(unittest.TestCase):
     def test_fib_exists(self):
         self.assertTrue(callable(fib))

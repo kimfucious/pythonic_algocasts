@@ -13,22 +13,4 @@
 
 
 class Stack:
-    def __init__(self):
-        self.data = []
-
-    def push(self, data):
-        self.data.append(data)
-
-    def pop(self):
-        # If statement prevents error when popping an empty list
-        if self.data:
-            return self.data.pop()
-        else:
-            return None
-
-    def peek(self):
-        # If statement prevents error when trying to get non existent value
-        if self.data:
-            return self.data[-1]
-        else:
-            return None
+    pass

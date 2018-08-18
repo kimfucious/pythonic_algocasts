@@ -16,37 +16,4 @@
 
 
 def matrix(n):
-    """
-    Need to create a list of n x n filled with None to avoid 'IndexError: list
-    index out of range' issues when using this technique Also note the +1s and
-    -1s on the ranges, as the second argument in a range is non-inclusive. There
-    are other ways to do this, but they make my head explode:
-    https://rosettacode.org/wiki/Spiral_matrix#Python
-    """
-    spiral = [[None] * n for j in range(n)]
-    start_col, start_row = 0, 0
-    end_col, end_row = n-1, n-1
-    counter = 1
-
-    while start_col <= end_col and start_row <= end_row:
-        for index in range(start_row, end_col+1):
-            spiral[start_row][index] = counter
-            counter += 1
-        start_row += 1
-
-        for index in range(start_row, end_row+1):
-            spiral[index][end_col] = counter
-            counter += 1
-        end_col -= 1
-
-        for index in range(end_col, start_col-1, -1):
-            spiral[end_row][index] = counter
-            counter += 1
-        end_row -= 1
-
-        for index in range(end_row, start_row-1, -1):
-            spiral[index][start_col] = counter
-            counter += 1
-        start_col += 1
-
-    return spiral
+    pass

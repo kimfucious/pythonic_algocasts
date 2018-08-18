@@ -3,7 +3,7 @@ from exercises.midpoint import midpoint
 from helpers.linkedlist import Node, LinkedList
 
 
-# @unittest.skip("skip midpoint tests")
+@unittest.skip("skip midpoint tests")
 class MidpointTests(unittest.TestCase):
     def test_function_exists(self):
         # midpoint function exists

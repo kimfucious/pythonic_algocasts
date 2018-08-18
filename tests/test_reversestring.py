@@ -2,6 +2,7 @@ import unittest
 from exercises.reversestring import reverse
 
 
+@unittest.skip("skip reverse string")
 class ReverseStringTests(unittest.TestCase):
     def test_function_exists(self):
         """

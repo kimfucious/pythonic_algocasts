@@ -2,6 +2,7 @@ import unittest
 from exercises.anagrams import anagrams
 
 
+@unittest.skip("skip anagrams")
 class AnagramsTests(unittest.TestCase):
     def test_anagram_function_exists(self):
         """

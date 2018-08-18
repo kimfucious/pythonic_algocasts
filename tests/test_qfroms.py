@@ -2,6 +2,7 @@ import unittest
 from exercises.qfroms import Queue
 
 
+@unittest.skip("skip qfroms")
 class QueueFromStackTests(unittest.TestCase):
     def test_queue_is_callable(self):
         self.assertTrue(callable(Queue))
