@@ -4,7 +4,7 @@ from exercises.fib import fib
 
 @unittest.skip("skip fib tests")
 class FibonacciTests(unittest.TestCase):
-    def test_fib_exists(self):
+    def test_fib_is_callable(self):
         self.assertTrue(callable(fib))
 
     def test_fib_1(self): self.assertEqual(fib(1), 1)

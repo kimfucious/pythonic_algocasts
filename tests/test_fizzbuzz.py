@@ -6,8 +6,7 @@ from exercises.fizzbuzz import fizzbuzz
 
 @unittest.skip("skip fizzbuzz")
 class FizzBuzzTests(unittest.TestCase):
-    def test_function_exists(self):
-        # fizzbuzz function exists
+    def test_function_is_callable(self):
         self.assertTrue(callable(fizzbuzz))
 
     def test_fizz_with_1(self):

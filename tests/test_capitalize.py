@@ -4,8 +4,7 @@ from exercises.capitalize import capitalize
 
 @unittest.skip("skip capitalize")
 class CapitalizeTests(unittest.TestCase):
-    def test_function_exists(self):
-        # capitalize function exists
+    def test_capitalize_is_callable(self):
         self.assertTrue(callable(capitalize))
 
     def test_capitalize_1(self):

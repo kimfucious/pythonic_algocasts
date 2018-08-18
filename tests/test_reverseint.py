@@ -4,9 +4,9 @@ from exercises.reverseint import reverse_int
 
 @unittest.skip("skip reverse int")
 class ReverseIntegerTests(unittest.TestCase):
-    def test_reverse_int_exists(self):
+    def test_reverse_int_is_callable(self):
         """
-        Tests that reverse_int function exists
+        Tests that reverse_int function is_callable
         """
         self.assertTrue(callable(reverse_int))
 

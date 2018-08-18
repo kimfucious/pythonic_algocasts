@@ -4,9 +4,9 @@ from exercises.anagrams import anagrams
 
 @unittest.skip("skip anagrams")
 class AnagramsTests(unittest.TestCase):
-    def test_anagram_function_exists(self):
+    def test_anagram_function_is_callable(self):
         """
-        anagrams function exists
+        anagrams function is_callable
         """
         self.assertTrue(callable(anagrams))
 

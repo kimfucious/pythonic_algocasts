@@ -5,7 +5,7 @@ from helpers.queue_for_weave import Queue
 
 @unittest.skip("skip weave")
 class WeaveStringTests(unittest.TestCase):
-    def test_peek_exists(self):
+    def test_peek_is_callable(self):
         # queues have a peek function
         q = Queue()
         self.assertTrue(callable(q.peek))
@@ -32,7 +32,7 @@ class WeaveStringTests(unittest.TestCase):
             2
         )
 
-    def test_weave_exists(self):
+    def test_weave_is_callable(self):
         # weave is a function
         self.assertTrue(callable(weave))
 

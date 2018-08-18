@@ -4,15 +4,15 @@ from exercises.linkedlist import LinkedList, Node
 
 @unittest.skip("skip linked list")
 class LinkedListTests(unittest.TestCase):
-    def test_node_class_exists(self):
+    def test_node_class_is_callable(self):
         """
-        Tests that Node class exists and is callable
+        Tests that Node class is_callable and is callable
         """
         self.assertTrue(callable(Node))
 
-    def test_linkedlist_class_exists(self):
+    def test_linkedlist_class_is_callable(self):
         """
-        Tests that LinkedList class exists and is callable
+        Tests that LinkedList class is_callable and is callable
         """
         self.assertTrue(callable(LinkedList))
 

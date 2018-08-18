@@ -4,9 +4,9 @@ from exercises.reversestring import reverse
 
 @unittest.skip("skip reverse string")
 class ReverseStringTests(unittest.TestCase):
-    def test_function_exists(self):
+    def test_function_is_callable(self):
         """
-        Tests that reverse function exists
+        Tests that reverse function is_callable
         """
         self.assertTrue(callable(reverse))
 

@@ -5,7 +5,7 @@ from exercises.maxchar import max_char
 @unittest.skip("skip max char tests")
 class MaxCharTests(unittest.TestCase):
     def test_max_char_is_callable(self):
-        # max_char function exists
+        # max_char function is_callable
         self.assertTrue(callable(max_char))
 
     def test_get_max_char(self):

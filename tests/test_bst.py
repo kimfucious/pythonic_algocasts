@@ -6,7 +6,7 @@ from exercises.bst import Node
 class BinarySearchTreeTests(unittest.TestCase):
     def test_node_class_is_callable(self):
         """
-        Test that Node class exists and is callable
+        Test that Node class is_callable and is callable
         """
         self.assertTrue(callable(Node))
 

@@ -4,8 +4,8 @@ from exercises.matrix import matrix
 
 @unittest.skip("skip matrix tests")
 class MatrixTests(unittest.TestCase):
-    def test_function_exists(self):
-        # matrix function exists
+    def test_function_is_callable(self):
+        # matrix function is_callable
         self.assertTrue(callable(matrix))
 
     def test_matrix_2(self):

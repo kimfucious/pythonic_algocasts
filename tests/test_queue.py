@@ -4,7 +4,7 @@ from exercises.queue import Queue
 
 @unittest.skip("skip queue")
 class QueueTests(unittest.TestCase):
-    def test_fib_exists(self):
+    def test_fib_is_callable(self):
         self.assertTrue(callable(Queue))
 
     def test_add(self):

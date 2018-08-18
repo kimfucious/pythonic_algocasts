@@ -4,8 +4,8 @@ from exercises.vowels import vowels
 
 @unittest.skip("skip vowels tests")
 class VowelsTests(unittest.TestCase):
-    def test_function_exists(self):
-        # vowels function exists
+    def test_function_is_callable(self):
+        # vowels function is_callable
         self.assertTrue(callable(vowels))
 
     def test_get_vowels_1(self):

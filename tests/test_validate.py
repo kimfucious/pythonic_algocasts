@@ -5,8 +5,8 @@ from exercises.validate import validate
 
 @unittest.skip("skip validate binary search tree tests")
 class ValidateTests(unittest.TestCase):
-    def test_function_exists(self):
-        # validate function exists
+    def test_function_is_callable(self):
+        # validate function is_callable
         self.assertTrue(callable(validate))
 
     def test_validate_valid_bst(self):

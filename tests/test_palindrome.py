@@ -4,8 +4,8 @@ from exercises.palindrome import palindrome
 
 @unittest.skip("skip palindromes")
 class PalindromeTests(unittest.TestCase):
-    def test_function_exists(self):
-        # Palindrome function exists
+    def test_function_is_callable(self):
+        # Palindrome function is_callable
         self.assertTrue(callable(palindrome))
 
     def test_palindrome(self):

@@ -5,8 +5,8 @@ from helpers.linkedlist import Node, LinkedList
 
 @unittest.skip("skip midpoint tests")
 class MidpointTests(unittest.TestCase):
-    def test_function_exists(self):
-        # midpoint function exists
+    def test_function_is_callable(self):
+        # midpoint function is_callable
         self.assertTrue(callable(midpoint))
 
     def test_midpoint_odd(self):
