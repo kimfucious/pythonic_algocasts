@@ -2,11 +2,13 @@
 
 This repo contains Pythonic versions of exercises based on **Stephen Grider's** [_The Coding Interview Bootcamp: Algorithms + Datastructures_](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/?couponCode=4MORE1234) found on Udemy.
 
+I created this, as I wanted to apply what I learned in JavaScript from Stephen's course, toward learning Python.
+
 This repo is not intended to be a rip off of Stephen's work or a replacement for his very informative course targeted at JavaScript. Consider it more of a Pythonic ode.  
 
 > :information_desk_person: I pinged him about doing this, but didn't get a response.  
 
-This repo is also not a substitute for the ton of material he covers, erudite teaching he provides, and the practical experience he shares throughout the course lectures. So go buy it if you really want a good start toward learning these the concepts behind these exercises (in JavaScript).
+This repo is also not a substitute for the ton of material he covers, erudite teaching he provides, and the practical experience he shares throughout the course lectures. In fact, you're not likely to get a whole lot out of these exercises without having access to the course material.  So if you really want a good start toward learning these the concepts behind these exercises (in JavaScript) and then apply them in Python, go buy his course and enjoy what I've created here! :rainbow: :unicorn: :rainbow: :cat: :rainbow: :sheep: :rainbow:
 
 ## Features
 

@@ -3,7 +3,8 @@
 # hand child is less than the parent node's value, and that every node's right
 # hand child is greater than the parent
 # NOTE:  max and min are built-in functions in Python; however, you can use them
-# here eventhough your syntax highlighter might get you thinking otherwise.
+# here as arguments/variables eventhough your syntax highlighter might get you
+# thinking otherwise.
 
 
 def validate(node, min=None, max=None):
