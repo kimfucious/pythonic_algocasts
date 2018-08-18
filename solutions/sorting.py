@@ -46,3 +46,6 @@ def merge(left, right):
         else:
             results.append(right.pop(0))
     return[*results, *left, *right]
+
+
+merge_sort([100, -40, 500, -124, 0, 21, 7])

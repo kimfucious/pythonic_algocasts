@@ -23,8 +23,6 @@ class LinkedList:
         self.head = None
 
     def for_each(self, fn):
-        if not self.head:
-            return
         node = self.head
         while node:
             fn(node)
@@ -44,13 +42,7 @@ class LinkedList:
         return self.head
 
     def get_last(self):
-        if not self.head:
-            return None
-        node = self.head
-        while node:
-            if not node.next:
-                return node
-            node = node.next
+        return self.get_at(self.size() - 1)
 
     def insert_first(self, data):
         self.head = Node(data, self.head)
@@ -89,17 +81,7 @@ class LinkedList:
         self.head = self.head.next
 
     def remove_last(self):
-        if not self.head:
-            return None
-        if not self.head.next:
-            self.head = None
-            return
-        prev = self.head
-        node = self.head.next
-        while node.next:
-            prev = node
-            node = node.next
-        prev.next = None
+        self.remove_at(self.size() - 1)
 
     def size(self):
         counter = 0
