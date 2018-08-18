@@ -29,9 +29,9 @@ class LevelWidthTests(unittest.TestCase):
         """
         root = Node(0)
         root.add(1)
-        root.children[0].add(1)
-        root.children[2].add(3)
-        root.children[0].children.add(4)
+        root.children[0].add(2)
+        root.children[0].add(3)
+        root.children[0].children[0].add(4)
         self.assertEqual(level_width(root), [1, 1, 2, 1])
 
 

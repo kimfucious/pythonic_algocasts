@@ -12,5 +12,14 @@
 
 
 def level_width(root):
-    l = []
-    while
+    widths = [0]
+    l = [root, "end"]
+    while len(l) > 1:
+        node = l.pop(0)
+        if node == "end":
+            l.append("end")
+            widths.append(0)
+        else:
+            l = l + node.children
+            widths[-1] += 1
+    return widths

@@ -54,7 +54,7 @@ class Tree:
 
     def traverse_df(self, fn):
         l = [self.root]
-        while l
+        while l:
             node = l.pop(0)
             # There is no method (that I know of) to extend to the front (i.e.
             # prepend) a list of elements to a list
