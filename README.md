@@ -19,7 +19,7 @@ This repo is also not a substitute for the ton of material he covers, erudite te
 ## Requirements
 
 - [Python 3](https://www.python.org/downloads/):  some tests won't work if you use Python 2
-- An testing framework ( e.g. pytest or unnitest )
+- A testing framework ( e.g. pytest or unnitest )
 - A text editor:  Atom, Sublime Text, Vim, Visual Studio Code, etc.
 - A terminal
 
@@ -46,7 +46,7 @@ git clone git@github.com:kimfucious/pythonic_algocasts.git
 git clone https://github.com/kimfucious/pythonic_algocasts.git 
 ```
 
-This repo has both a `requirements.txt` file and a Pipfile for making installing dependencies easy.
+This repo has both a `requirements.txt` file and a `Pipfile` for making installing dependencies easy.
 
 You don't need to install any dependencies, if you're planning on just using `unittest` to test your solutions.  
 
@@ -197,7 +197,7 @@ This process is not perfect.  Admittedly, the console output is not pretty.  If 
 
 When this does happen, the report will reload in the browser, but it will be using old data so the results will not be accurate.
 
-At this point, you can try running your tests manually (see [Testing](##Testing) below).
+At this point, you can try running your tests manually (see [Testing](##Testing) below) to see more clearly what's going on and fix your solution.
 
 Lastly, to generate HTML reports manually without livereload, run the following from the root directory:
 
@@ -228,7 +228,7 @@ def function(x):
 
 There is one test file for each exercise. The naming convention should make it evident as to what tests what.
 
-All of the test files should be considered done, meaning that you should not need to edit any of them, except for commenting out the `@unittest.skip()` lines when you're ready to test (see [Skipping and Un-ukipping Tests](###Skipping-and-Un-skipping-Tests)). They should _just work_ and are just there to test the solutions that you create for the exercises.
+All of the test files should be considered done, meaning that you should not need to edit any of them, except for commenting out the `@unittest.skip()` lines when you're ready to test (see [Skipping and Unskipping Tests](###Skipping-and-Unskipping-Tests)). They should _just work_ and are just there to test the solutions that you create for the exercises.
 
 > :beetle:  If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
 
@@ -238,7 +238,7 @@ Some of the test files contain one or more test cases (i.e. Classes) and these c
 
 Note that the `__init__.py` files that you see in the directory structure (and the directory structure itself) are there to enable test discovery. Don't move things around or delete any `__init__.py` files, unless you know that you really want to.
 
-### Test Frameworks
+### Testing Frameworks
 
 At the risk of sounding redundant, all tests have been tested using both `unittest` and `pytest`.
 
@@ -297,7 +297,7 @@ To run an individual unit test:
 
 > :bulb:  adding --verbose to either of the two above commands will give you a more output in your test results.
 
-### Skipping and Un-skipping Tests
+### Skipping and Unskipping Tests
 
 You'll have noticed that all of the tests are skipped when you first try to run them. This is so that you don't see a load of failures and/or errors on exercises that you haven't event attempted to work on yet.
 
