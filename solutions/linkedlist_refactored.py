@@ -1,6 +1,8 @@
 # --- Directions
 # Implement classes Node and Linked Lists
 # See 'directions' document in misc folder
+# NOTE:  These solutions are refactored so that methods reuse code in other
+# methods, rather than re-creating code.
 
 
 class Node:
@@ -44,9 +46,6 @@ class LinkedList:
     def get_last(self):
         return self.get_at(self.size() - 1)
 
-    def insert_first(self, data):
-        self.head = Node(data, self.head)
-
     def insert_at(self, data, index):
         if not self.head:
             self.head = Node(data)
@@ -57,12 +56,11 @@ class LinkedList:
         prev = self.get_at(index - 1) or self.get_last()
         prev.next = Node(data, prev.next)
 
+    def insert_first(self, data):
+        self.insert_at(data, 0)
+
     def insert_last(self, data):
-        last = self.get_last()
-        if last:
-            last.next = Node(data)
-        else:
-            self.head = Node(data)
+        self.insert_at(data, self.size())
 
     def remove_at(self, index):
         if not self.head:
@@ -76,9 +74,7 @@ class LinkedList:
         prev.next = prev.next.next
 
     def remove_first(self):
-        if not self.head:
-            return
-        self.head = self.head.next
+        self.remove_at(0)
 
     def remove_last(self):
         self.remove_at(self.size() - 1)
