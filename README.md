@@ -19,13 +19,96 @@ This repo is also not a substitute for the ton of material he covers, erudite te
 ## Requirements
 
 - [Python 3](https://www.python.org/downloads/):  some tests won't work if you use Python 2
-- An testing framework:  nose, pytest, or unnitest
+- An testing framework ( e.g. pytest or unnitest )
 - A text editor:  Atom, Sublime Text, Vim, Visual Studio Code, etc.
 - A terminal
 
 > :floppy_disk:  If you're running Windows 10 try [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 > :snake:  There is an excellent Python extension for Visual Studio Code. Check it out [here](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
+
+## Installation
+
+### Clone this repo
+
+1. Go to a place on your machine where you want to download this repo (e.g. `cd ~/workspace/`):
+2. Run one of the following commands:
+
+#### SSH
+
+```shell
+git clone git@github.com:kimfucious/pythonic_algocasts.git
+```
+
+#### HTTPS 
+
+```shell
+git clone https://github.com/kimfucious/pythonic_algocasts.git 
+```
+
+This repo has both a `requirements.txt` file and a Pipfile for making installing dependencies easy.
+
+You don't need to install any dependencies, if you're planning on just using `unittest` to test your solutions.  
+
+If you want to use pytest, you can install it manually (see [below](###Test-Frameworks)); otherwise it will be installed by `pip` or `pipenv` along with the following packages:
+
+- A beta version of HTMLTestRunner (creates HTML reports)
+- liveReload (small dev server to display HTML reports)
+- pylint (a Python code linter)
+- other sub-dependencies
+
+### Installing dependencies using pip
+
+I'm using pip3 throughout this documentation, but pip should also work fine.
+
+You probably already have pip, but here's [some info](https://pip.pypa.io/en/stable/installing/) on installation and upgrading.
+
+You probably also want to create an new Python environment.  To do that, navigate to this downloaded repo's root directory, and run the following:
+
+```shell
+python3 -m venv env
+source env/bin/activate
+```
+
+> :point_up:  The above commands assume you are using bash or zsh.  Refer to the below or see [here](https://docs.python.org/3/library/venv.html) for using `venv` in other shells.
+
+| Platform | Shell      | Command to activate virtual environment |
+| -------- | ---------- | --------------------------------------- |
+| Posix    | bash/zsh   | $ source /bin/activate                  |
+|          | fish       | $ . /bin/activate.fish                  |
+|          | csh/tcsh   | $ source /bin/activate.csh              |
+| Windows  | cmd.exe    | C:\> \Scripts\activate.bat              |
+|          | PowerShell | PS C:\> \Scripts\Activate.ps1           |
+
+Run `pip3 list`, and you should see only two files:
+
+```shell
+Package    Version
+---------- -------
+pip        10.0.1 
+setuptools 39.0.1 
+```
+
+You'll get prompted to upgrade pip at this point.  Go ahead and do that, if you want.
+
+Next, run:
+
+```shell
+pip3 install -r requirements.txt
+```
+
+Once this completes, run `pip3 list` again, and Bob's your uncle.
+
+### Installing using Pipenv
+
+Pipenv is awesome.  You can learn about it [here](https://docs.pipenv.org).
+
+After installing Pipenv, navigate to this project's root and run the following:
+
+```shell
+pipenv install
+pipenv shell
+```
 
 ## Contents
 
@@ -35,7 +118,7 @@ This repo is also not a substitute for the ton of material he covers, erudite te
 
 Starter files for each exercise with instructions that describe what the solution should be.
 
-While you can, for the most part, approach these exercises in any order. The course does tend to build upon itself, so you may want to follow the order in which the lectures are covered in Stephen's course
+While you can, for the most part, approach these exercises in any order. The course does tend to build upon itself, so you may want to follow the order in which the lectures are covered in Stephen's course.
 
 #### Order of exercises
 
@@ -92,12 +175,12 @@ python3 reports.py
 
 To view the reports, open http://localhost:8080 in your browser, after running the above command.
 
-There are a couple things happening to make this work.
+There are a few things happening to make this work.
 
 1.  I've setup a test suite containing all of the tests in the `run_all_tests.py` file.
-2.  This file also uses James Sloan's beta version of [HTMLTestRunner](https://github.com/JamesMTSloan/HtmlTestRunner).  I'm using the beta, because James has made it possible to combine multiple test cases into one report.  If/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through, I'll update this project to use the updated release.  NOTE:  For now, you'll need to install the beta manually, by cloning James's repo and using `pip install -e` to install it into your environment.
+2.  This file also uses James Sloan's beta version of [HTMLTestRunner](https://github.com/JamesMTSloan/HtmlTestRunner).  I'm using the beta, because James has made it possible to combine multiple test cases into one report.  If/when this [pull request](https://github.com/oldani/HtmlTestRunner/pull/32) comes through, I'll update this project to use the updated release.
 3.  The `reports.py` file launches [livereload](https://livereload.readthedocs.io/en/latest/), which is a dev server that serves up the `test_results.html` file.
-4.  livereload is setup to watch all `*.py` files in the exercises directory.  Any changes to these files, kicks off the `run_all_tests.py` process, which overwrites any existing `test_results.html` file, it then waits a few seconds, and automatically reloads the browser window.
+4.  livereload is setup to watch all `*.py` files in the exercises directory.  Any changes to these files, kicks off the `run_all_tests.py` process, which overwrites any existing `test_results.html` file in the reports directory, it then waits a few seconds, and automatically reloads the browser window.
 
 > :point_up:  If you're running into an issue where the browser refreshes before the tests complete, like if you're running fib(39), you can adjust the delay in the `reports.py` file on the line shown below:
 
@@ -106,7 +189,7 @@ server.watch("./exercises/*.py",
              shell("python3 run_all_tests.py --quiet"), delay=3)
 ```
 
-This process is not perfect.  If there's something really wrong (e.g. SyntaxError) with an exercise solution, the process will crash before any report is generated.  This is usually indicated by something red in the console output, that might resemble this with a bunch of nasty stuff after it, usually ending with the type of error being thrown:
+This process is not perfect.  Admittedly, the console output is not pretty.  If you want nice output in the console, checkout `pytest` in [Testing](###Testing-Frameworks).  Also, if there's something really wrong (e.g. SyntaxError) with an exercise solution, the process will crash before any report is generated.  This is usually indicated by something red in the console output, that might resemble this with a bunch of nasty stuff after it, usually ending with the type of error being thrown:
 
 ```shell
 [E 180819 00:44:57 server:75] yadda, yadda, yadda SyntaxError: invalid syntax...
@@ -124,7 +207,7 @@ python3 run_all_tests.py
 
 ### Solutions
 
-Examples of solutions to the exercises that you can use to compare against your own work or to peek at when you're stuck.
+Here are the examples solutions to the exercises that you can use to compare against your own work or to peek at for inspiration.
 
 Feel free to recommend your solution(s) via a pull request if you come up with anything better, cleaner, clearer, more-pythonic, etc. Please use `doctype` to document your solutions, instead of comments.
 
@@ -145,7 +228,7 @@ def function(x):
 
 There is one test file for each exercise. The naming convention should make it evident as to what tests what.
 
-All of the test files should be considered done, meaning that you should not need to edit any of them. They should _just work_ and are just there to test the solutions that you create for the exercises.
+All of the test files should be considered done, meaning that you should not need to edit any of them, except for commenting out the `@unittest.skip()` lines when you're ready to test (see [Skipping and Un-ukipping Tests](###Skipping-and-Un-skipping-Tests)). They should _just work_ and are just there to test the solutions that you create for the exercises.
 
 > :beetle:  If you find any mistakes in the tests or have any recomendations to improve them, please raise an issue.
 

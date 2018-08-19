@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 html-testrunner = {editable = true, path = "./../HtmlTestRunner"}
 pytest = "*"
-pytest-watch = "*"
 livereload = "*"
 
 [dev-packages]
