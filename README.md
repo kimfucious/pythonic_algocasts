@@ -1,6 +1,6 @@
 # Pythonified Coding Interview Bootcamp Exercises
 
-This repo contains Pythonic versions of exercises based on **Stephen Grider's** [_The Coding Interview Bootcamp: Algorithms + Datastructures_](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/?couponCode=4MORE1234) found on Udemy.
+This repo contains Pythonic versions of exercises based on **Stephen Grider's** [_The Coding Interview Bootcamp: Algorithms + Datastructures_](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/?couponCode=4MORE1234) found on Udemy.  The JavaScript repo is [here](https://github.com/StephenGrider/AlgoCasts).
 
 I created this, as I wanted to apply what I learned in JavaScript from Stephen's course, toward learning Python.
 
