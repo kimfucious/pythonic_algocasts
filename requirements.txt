@@ -15,7 +15,7 @@ mccabe==0.6.1
 more-itertools==4.3.0
 pathtools==0.1.2
 pluggy==0.7.1
-py==1.5.4
+py==1.11.0
 pycodestyle==2.4.0
 pylint==2.1.1
 pytest==3.7.1
